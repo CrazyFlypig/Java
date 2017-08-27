@@ -27,21 +27,21 @@
 * 软引用可用来实现内存敏感的高速缓存。
 * 软引用可以和一个引用队列（ReferenceQueue）联合使用，如果软引用所引用的对象被垃圾回收器回收，java虚拟机就会把这个软引用加入到与之关联的引用队列里。
 * **注意**：GC准备对SoftRefence所指的对象进行回收时，调用对象的`finalize()`方法之前，SoftRefence对象自身会被加入到这个RefenceQueue对象中，此时可以通过ReferenceQueue的`poll()`方法取到它们。
-* 测试代码：
+* [https://github.com/CrazyFlypig/Java/blob/master/src/main/java/javaDemo/lang/ref/SoftReference/SoftReferenceDemo.java](https://github.com/CrazyFlypig/Java/blob/master/src/main/java/javaDemo/lang/ref/SoftReference/SoftReferenceDemo.java "测试代码")
 ### 弱引用
 * 用来描述非必须的对象，强度比软引用更软一些，被弱引用关联的对象只能生存到下一次垃圾收集发生之前。
 * 当垃圾回收机制运行时，不管系统内存是否足够，都会被回收。 
 * 通过WeakReference类实现
 * 一旦弱引用对象被垃圾回收器回收，便会加入到一个注册引用队列中。
 * **注意**：Java垃圾回收器准备对WeakReference所指向的对象进行回收时，调用这个对象的`finalize()`方法之前，WeakReference对象自身会被加入到这个ReferenceQueue对象中，此时可以通过ReferenceQueue的`poll()`方法取到它们。
-* 测试代码：
+* [https://github.com/CrazyFlypig/Java/blob/master/src/main/java/javaDemo/lang/ref/WeakReference/WeakReferenceDemo.java](https://github.com/CrazyFlypig/Java/blob/master/src/main/java/javaDemo/lang/ref/WeakReference/WeakReferenceDemo.java "测试代码")
 ### 虚引用 Phantom Reference
 * 不同于软引用和弱引用，虚引用无法通过`get()`方法来取得目标对象的强引用从而使用目标对象，在源码中，虚引用的`get()`方法永远返回null。
 * 主要用于跟踪对象被垃圾回收的状态。不能单独使用，必须和引用队列（ReferenceQueue）联合使用。通过查看引用队列中是否包含对象所对应的虚引用来判断对象是否被回收。
 * 目标对象被回收前，虚引用被放入一个ReferenceQueue对象中，说明referent的`finalize()`方法已经调用。
 * **注意**：PhantomReference只有当java垃圾回收器对其所指的对象真正进行回收时，会将其加入到ReferenceQueue对象中，如此就可以跟踪对象的销毁情况。这里referent对象的`finalize()`方法已经调用过了。
 * 具体用法和之前不同，它必须传入一个ReferenceQueue对象。
-* 测试代码：
+* [https://github.com/CrazyFlypig/Java/blob/master/src/main/java/javaDemo/lang/ref/PhantomReference/PhantomReferenceDemo.java](https://github.com/CrazyFlypig/Java/blob/master/src/main/java/javaDemo/lang/ref/PhantomReference/PhantomReferenceDemo.java "测试代码")
 ## System.gc()操作
 * System.gc()文档：
 ````java
