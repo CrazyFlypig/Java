@@ -1,4 +1,4 @@
-package javaDemo.lang.ref.PhantomReference;
+package javaDemo.jvm.Reference.PhantomReference;
 
 /**
  * 弱引用测试
@@ -21,11 +21,11 @@ public class PhantomReferenceDemo {
     private static ReferenceQueue<MyObject> queue = new ReferenceQueue<MyObject>();
     /**
      * ====================== 控制台打印 ======================
-     * 创建的虚拟引用为 : java.lang.ref.PhantomReference@1d44bcfa
+     * 创建的虚拟引用为 : java.lang.Reference.PhantomReference@1d44bcfa
      * 第1次GC
      * MyObject's finalize called
      * 第2次GC
-     * 删除的虚引用为: java.lang.ref.PhantomReference@1d44bcfa , 获取虚引用的对象 : null
+     * 删除的虚引用为: java.lang.Reference.PhantomReference@1d44bcfa , 获取虚引用的对象 : null
      * ====================== 控制台打印 ======================
      *
      * 再经过一次GC之后，系统找到了垃圾对象，并调用finalize()方法回收内存，但没有立即加入PhantomReference Queue中。

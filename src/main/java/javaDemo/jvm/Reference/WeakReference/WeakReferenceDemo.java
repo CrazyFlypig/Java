@@ -1,4 +1,4 @@
-package javaDemo.lang.ref.WeakReference;
+package javaDemo.jvm.Reference.WeakReference;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
@@ -17,11 +17,11 @@ public class WeakReferenceDemo {
     public static void main(String[] args) {
         /**
          * ====================== 控制台打印 ======================
-         * 创建的弱引用为 : java.lang.ref.WeakReference@1d44bcfa
+         * 创建的弱引用为 : java.lang.Reference.WeakReference@1d44bcfa
          * Before GC: Weak Get = I am MyObject
          * After GC: Weak Get = null
          * MyObject's finalize called
-         * 删除的弱引用为 : java.lang.ref.WeakReference@1d44bcfa , 获取到的弱引用的对象为 : null
+         * 删除的弱引用为 : java.lang.Reference.WeakReference@1d44bcfa , 获取到的弱引用的对象为 : null
          * ====================== 控制台打印 ======================
          */
         MyObject object = new MyObject();

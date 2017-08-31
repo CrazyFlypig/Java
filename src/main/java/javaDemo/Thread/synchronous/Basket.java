@@ -1,4 +1,4 @@
-package javaDemo.lang.Thread.synchronous;
+package javaDemo.Thread.synchronous;
 
 /**
  * 篮子

@@ -1,4 +1,4 @@
-package javaDemo.lang.Thread.ProducerConsumer;
+package javaDemo.Thread.ProducerConsumer;
 
 /**
  * 蜜蜂-生产者

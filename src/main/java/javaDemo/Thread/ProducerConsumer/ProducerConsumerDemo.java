@@ -1,4 +1,4 @@
-package javaDemo.lang.Thread.ProducerConsumer;
+package javaDemo.Thread.ProducerConsumer;
 
 /**
  * 生产者-消费者

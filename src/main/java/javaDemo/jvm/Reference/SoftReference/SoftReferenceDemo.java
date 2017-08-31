@@ -1,4 +1,4 @@
-package javaDemo.lang.ref.SoftReference;
+package javaDemo.jvm.Reference.SoftReference;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;

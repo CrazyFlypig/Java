@@ -1,4 +1,4 @@
-package javaDemo.lang.Runnable;
+package javaDemo.Thread.Runnable;
 
 /**
  * @author cc

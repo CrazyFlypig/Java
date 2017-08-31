@@ -1,4 +1,4 @@
-package javaDemo.lang.Thread.ProducerConsumer;
+package javaDemo.Thread.ProducerConsumer;
 
 /**
  * 蜜蜂和熊共操作的蜜罐

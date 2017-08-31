@@ -1,4 +1,4 @@
-package javaDemo.lang.Thread.synchronous;
+package javaDemo.Thread.synchronous;
 
 /**
  * 40个工人吃100个面包
