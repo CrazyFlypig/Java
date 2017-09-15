@@ -214,12 +214,12 @@ public void adTel (String... str){
 	1. Set keyset():返回map包含的所有key的一个Set视图
 	2. Collection values():返回一个map中包含的所有value的一个Collection视图。
 	3. Set<Map.Entry<K,V>> entrySet():返回一个map所包含的所有映射的一个集合视图。
-21. HashMap和HashTable有何不同？
-	1. HashMap允许key和value为null，而HashMap不允许
-	2. HashMap适合单线程环境，HashTable是同步的，适合多线程环境。
-	3. HashMap的一个子类LinkedHashMap有序，而HashTable顺序不可知
-	4. HashMap提供对key的Set进行遍历，因此它是fail-fast的，但HashTable提供对Key的Enumeration进行遍历，它不支持fail-fast。
-	5. HashTable被认为是个遗留的类，如果你寻求在迭代的时候修改Map，应该使用ConcurrentHashMap。
+21. HashMap和Hashtable有何不同？
+	1. HashMap允许key和value为null，而Hashtable不允许
+	2. HashMap适合单线程环境，Hashtable是同步的，适合多线程环境。
+	3. HashMap的一个子类LinkedHashMap有序，而Hashtable顺序不可知
+	4. HashMap提供对key的Set进行遍历，因此它是fail-fast的，但Hashtable提供对Key的Enumeration进行遍历，它不支持fail-fast。
+	5. Hashtable被认为是个遗留的类，如果你寻求在迭代的时候修改Map，应该使用ConcurrentHashMap。
 22. 如何决定选用HashMap还是TreeMap？
 	1. 对于在Map中插入、删除和定位元素这类操作，HashMap是最好的选择。
 	2. 需要一个有序key集合进行遍历，TreeMap是更好的选择。
@@ -259,7 +259,7 @@ public void adTel (String... str){
 31. Collections类是什么？
 	1. 一个工具类仅包含静态方法。
 	2. 包含操作集合的多态算法。
-32. Comparable何Comparator接口是什么？
+32. Comparable和Comparator接口是什么？
 	1. 使用Array或Collection的排序方法时，需要在自定义类中实现Comparable接口，重写compareTo(T OBJ)方法。只能基于一个字段进行排序。this对象阐述更大或相等时，返回正整数或0。
 	2. Comparator接口的compare(Object o1,Object o2)方法实现传递两个对象参数。若第一个大于第二个返回正整数，相等返回0
 33. Comparable和Comparator接口有何区别？
